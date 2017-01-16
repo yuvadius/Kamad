@@ -1,9 +1,9 @@
 var config = {
-	apiKey: "AIzaSyD5fjRuASD9ZrjZgX315vnDga0pb5DJZ_s",
-	authDomain: "hasrata-724e7.firebaseapp.com",
-	databaseURL: "https://hasrata-724e7.firebaseio.com",
-	storageBucket: "hasrata-724e7.appspot.com",
-	messagingSenderId: "473676323598"
+	apiKey: "AIzaSyDdNYgEcT_ViMEUnmMzu9gZyMXe9XHRtyI",
+	authDomain: "kamad-8b437.firebaseapp.com",
+	databaseURL: "https://kamad-8b437.firebaseio.com",
+	storageBucket: "kamad-8b437.appspot.com",
+	messagingSenderId: "90092763806"
 };
 firebase.initializeApp(config);
 var storageRef = firebase.storage().ref();
@@ -29,21 +29,29 @@ var i18n = new Jed({
       "aliahData" : ["תאריך עלייה"],
       "applications" : ["רמת הידע בבניית אפליקציות לטלפונים חכמים"],
       "birthData" : ["תאריך לידה"],
+      "birthCountry": ["ארץ לידה"],
       "buildWeb" : ["רמת השליטה בבניית דפי אינטרנט"],
-      "cellphone" : ["סלולארי"],
+      "cellphone" : ["טלפון נייד"],
       "citizenship" : ["אזרחות"],
+      "endProject" : ["האם כתבת עבודת גמר בתיכון? אם כן, הצג את נושא העבודה"],
+      "fullNameEnglish": ["שם מלא באנגלית"],
       "firstName" : ["שם פרטי"],
       "favoriteCharacter" : ["מה התכונה החזקה או החיובית המאפיינת אותך ביותר? איך זה בא לידי ביטוי?"],
       "fears" : ["מהם חששותיך מהשירות הצבאי באחת מיחידות ההסרטה?"],
       "friendsCircle" : ["תאר את חוג החברים שלך"],
       "ftp" : ["רמת השליטה ברשתות FTP"],
       "graphicsAnimation" : ["גרפיקה ואנימציה"],
+      "hasPsychometry" : ["האם ניגשת למבחן הפסיכומטרי לקבלה לאוניברסיטה?"],
+      "psychometryGrade" : ["ציון פסיכומטרי"],
+      "psychometryDate" : ["תאריך פסיכומטרי"],
+      "schoolProgram" : ["האם עסקת בפעילות חברתית בבית הספר? אם כן, תאר את מעורבותך"],
       "hardPeople" : ["עם איזה אנשים יותר קשה לך להסתדר?"],
       "hardSchool" : ["מה היה לך יותר קשה בבית-הספר?"],
       "html5" : ["רמת השליטה ב-HTML5"],
       "idNumber" : ["תעודת זהות"],
       "investigateTasrit" : ["תחקיר ותסריט"],
       "lastName" : ["שם משפחה"],
+      "otherPhone": ["טלפון להודעות (הורים, קרובים, עבודה)"],
       "phone" : ["טלפון"],
       "networks" : ["ידע בהקמת רשתות מחשבים"],
       "photoSteel" : ["צילום סטילס"],
@@ -51,6 +59,7 @@ var i18n = new Jed({
       "production" : ["הפקה"],
       "scoreAverage" : ["כתוב/י מהו ממוצע הציונים שלך בתעודת הסיום של שנת הלימודים הקודמת"],
       "serveHasrata" : ["מ-1 עד 5, עד כמה היית מעוניין/ת לשרת באחת מיחידות ההסרטה? (1=הכי נמוך, 5=הכי גבוה)"],
+      "serveDotz" : ['מ-1 עד 5, עד כמה היית מעוניין לשרת בחטיבת דובר צה"ל?'],
       "street" : ["רחוב"],
       "streetNumber" : ["מספר בית"],
       "userImg" : ["תמונה אישית"],
@@ -65,9 +74,13 @@ var i18n = new Jed({
       "whatSpecialGive" : ["מה לדעתך תוכל לתרום במיוחד ליחידת ההסרטה?"],
       "whatWillGive" : ["מה לדעתך השירות ביחידת ההסרטה יוכל להקנות לך?"],
       "whyServeHasrata" : ["אני מעוניין/ת לשרת מיחידות ההסרטה כי..."],
+      "whyServeDotz" : ['אני מעוניין לשרת כמש"ק דוברות כי...'],
+      "publication" : ['האם אי פעם התפרסמה יצירה מפרי עטך? פרט מה פורסם, באיזה נושא, מתי והיכן'],
       "worstCharacter" : ["איזו תכונה חלשה או שלילית מאפיינת אותך? איך זה בא לידי ביטוי?"],
       "yourTeacherDesc" : ["איך המחנך שלך היה מתאר אותך?"],
       "motivationRadio" : ["ביחס לתפקידים אחרים/יחידות אחרות בהם היית רוצה לשרת בצבא, היכן מדורגות יחידות ההסרטה?"],
+      "experienceRadio" : ["אם יש לכם ניסיון באחד מתחומים התקשורת הבאים:"],
+      "newsFrequency" : ["באיזו תדירות את/ה צורך/ת תקשורת?"],
       "notes" : ["הערות"],
       "score" : ["ציון"],
       "skill" : ["מקצוע"],
@@ -136,7 +149,7 @@ $(document).ready(function() {
 
 		cols = [{defaultContent: ""}]
 		colsNoArrays = [{defaultContent: ""}]//Doesn't contain list columns like files and notes
-		specialCols = ["idNumber", "firstName", "lastName", "2units"]
+		specialCols = ["idNumber", "firstName", "lastName"]
 		columns = $.unique(columns)
 		$.each(specialCols, function(index, column) {
 			colsNoArrays.push({
@@ -265,11 +278,11 @@ $(document).ready(function() {
 
 				$("#personalImg").attr('src', '')
 				$("#uid").val(data.uid)
-				img = data.userImg.replace('<a href="#" class="link">', '').replace('</a>', '')
+				/*img = data.userImg.replace('<a href="#" class="link">', '').replace('</a>', '')
 				storageRef.child('files/'+$("#uid").val()+'/'+img).getDownloadURL().then(function(url) {
 					console.log(url)
 					$("#personalImg").attr('src', url)
-				})
+				})*/
 				rows = []
 				$.each(data, function(index, value) {
 					if(typeof value !== 'object') {

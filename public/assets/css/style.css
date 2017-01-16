@@ -521,3 +521,11 @@ div#imgName {
 .fifthDisabled:nth-child(7) .plusRemoveIcon {
 	visibility: hidden;
 }
+
+.didPsychometry {
+	display: none;
+}
+
+#experience {
+	display: none;
+}

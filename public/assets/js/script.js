@@ -6,11 +6,11 @@ if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine
 }
 
 var config = {
-	apiKey: "AIzaSyD5fjRuASD9ZrjZgX315vnDga0pb5DJZ_s",
-	authDomain: "hasrata-724e7.firebaseapp.com",
-	databaseURL: "https://hasrata-724e7.firebaseio.com",
-	storageBucket: "hasrata-724e7.appspot.com",
-	messagingSenderId: "473676323598"
+	apiKey: "AIzaSyDdNYgEcT_ViMEUnmMzu9gZyMXe9XHRtyI",
+	authDomain: "kamad-8b437.firebaseapp.com",
+	databaseURL: "https://kamad-8b437.firebaseio.com",
+	storageBucket: "kamad-8b437.appspot.com",
+	messagingSenderId: "90092763806"
 };
 firebase.initializeApp(config);
 var storageRef = firebase.storage().ref();
@@ -49,15 +49,6 @@ $(document).ready(function() {
 					$(this).addClass('warning')
 			  }
 			});
-			if(currentStep == 3){
-				counter = 0;
-				$( ".step3 .2units" ).each(function( index ) {
-				  counter += this.checked
-				});
-				if(counter != 2) {
-					x = currentStep
-				}
-			}
 		}
 		else
 			x = currentStep-1
@@ -84,9 +75,6 @@ $(document).ready(function() {
 	$('.years').append(getYearsOptions())
 	$('select.languages').append(getLanguagesOptions())
 
-	/*$('.languages.english').val('אנגלית')
-	$('.languages.arabic').val('ערבית')
-	$('.languages.french').val('צרפתית')*/
 
 	var citizenships = ["", "אוזבקית","אוקראינית","אורדו","אזרבייג'נית","איטלקית","אינדונזית","איסלנדית","אלבנית","אמהרית","אנגלית","אסטונית","אפריקאנס","אקאן","ארמנית","בולגרית","בוסנית","בורמזית","בלרוסית","בנגלית","גוג'ראטית","גרוזינית","גרמנית","דזונקה","דנית","הולנדית","הונגרית","הינדי","המונג","וולשית","וייטנאמית","זולו","חמרית","טג'יקית","טגלוג","טורקית","טורקמנית","טיבטית","טלוגו","טמילית","טסוואנה","יאו","יאוית","יוונית","יידיש","יפנית","כורדית","לאו","לטבית","לטינית","ליטאית","לינגלה","מונגולית ח'לח'ית","מלאית","מלגשית","מלטזית","מנדרינית","מקדונית","מראטהי","מרשלזית","נוארית","נורווגית","נייאנג'ה","נפאלית","סווהילית","סוטו","סומאלית","סינהלה","סינית, מסורתית","סינית, מפושטת","סלובנית","סלובקית","סמואית","ספרדית","סרבית","עברית","ערבית","פוג'ואו","פולנית","פורטוגזית","פינית","פלמית","פנג'אבי","פרסית","פשטו","צ'וקסית","צ'כית","צרפתית","קאנדה","קוריאנית","קזחית","קטלנית","קירונדי","קנטונזית","קצ'ואה","קרואטית","קריאולית האיטית","רומאני","רומאנש","רומנית","רוסית","שבדית","שנחאית","תאילנדית","תיגרינית"]
 	for(i = 1; i <= citizenships.length; i++) {
@@ -123,10 +111,6 @@ $(document).ready(function() {
 		$(this).closest(".addRemovePlugin").append($(this).closest('.disabled').clone().addClass('new'))
 		$(this).closest('.addRemovePlugin').find('.disabled:not(.new)').removeClass('disabled').find(".plusRemoveIcon").addClass('remove').removeClass('add').attr('src', 'assets/img/remove.png')		
 		newTr = $(this).closest('.addRemovePlugin').find('.new').removeClass('new')
-		//These lines create the NaN bug. I don't think that they are necessary
-		/*name = newTr.find('input').attr('name')
-		if(name !== undefined)
-			newTr.find('input').attr('name', name.split('_')[0] + (Number(name.split('_')[1]) + 1))*/
 
 	})
 
@@ -194,56 +178,8 @@ function changeStep(x) {
 	$(".content .step").hide()
 	$(".content .step"+x).show()
 
-	if(x == 9)
-		uploadFiles()
-}
-
-function uploadFiles() {
-	var inputs = $("input[type='file']")
-	var files = []
-	$.each(inputs, function(index, input) {
-		$.each(input.files, function(index, file) {
-			files.push(file)
-		})
-	})
-
-	$(".filesUpload").empty()
-	var total = files.length
-	var count = 0
-	$.each(files, function(index, file) {
-		var uploadTask = storageRef.child('files/'+uid+'/'+file.name).put(file)
-
-		newTr = '<tr>' +
-                    '<td>'+file.name+'</td>' +
-                    '<td><div class="percent"></div><progress id="'+file.name+'" value="0" max="100"></progress></td>' +
-                '</tr>'
-
-		$(".filesUpload").append(newTr)
-
-		uploadTask.on('state_changed', function(snapshot){
-		  var progress = Math.floor((snapshot.bytesTransferred / snapshot.totalBytes) * 100);
-		  $("progress[id='"+file.name+"']").val(progress)
-		  $("progress[id='"+file.name+"']").parent().find('.percent').text(progress + '%')
-
-		  switch (snapshot.state) {
-		    case firebase.storage.TaskState.PAUSED: // or 'paused'
-		      //console.log('Upload is paused');
-		      break;
-		    case firebase.storage.TaskState.RUNNING: // or 'running'
-		      //console.log('Upload is running');
-		      break;
-		  }
-		}, function(error) {
-		  // Handle unsuccessful uploads
-		}, function() {
-			//console.log('Uploaded a blob or file!');
-			var downloadURL = uploadTask.snapshot.downloadURL;
-			//console.log(downloadURL)
-			count++
-			if(total == count)
-				sendForm()
-		});
-	})
+	if(x == 8)
+		sendForm()
 }
 
 function sendForm() {
@@ -300,12 +236,6 @@ function sendForm() {
 		})
 	})
 
-	form['2units'] = []
-	$.each($("input[name='2units']:checked"), function(index, input) {
-		form['2units'].push($(input).val())
-	})
-	form['2units'] = form['2units'].join()
-
 	$.each($("input[type='radio']:checked"), function(index, input) {
 		if($(input).closest('table').length) {
 			if($(input).closest('table').attr('id') == 'languages')
@@ -325,12 +255,8 @@ function sendForm() {
 		form[$(input).attr('name')] = $(input).val()
 	})
 
-	form['userImg'] = $("#userImg").val().split('/').pop().split('\\').pop()
 	form['uid'] = uid
 	delete form['undefined']
-	for(i=0;i<form['portfolioFiles'].length;i++) {
-		delete form['portfolioFiles'][i]['undefined']
-	}
 	console.log(form)
 	db.ref('users/'+uid).set(form, function() {
 		changeStep(10)

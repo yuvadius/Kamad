@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
     <head>
-        <title>שאלון המיון ליחידות ההסרטה</title>
+        <title>שאלון הקמ"ד</title>
         <link rel="shortcut icon" href="https://www.idfblog.com/wp-content/themes/idf/img/favicon.ico" />
         <!-- Google Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Assistant" rel="stylesheet">
@@ -20,9 +20,8 @@
         <div class="container">
             <div class="top-bg">
                 <img class="logo" src="assets/img/dotz.png">
-                <div class="title">שאלון המיון ליחידות ההסרטה</div>
+                <div class="title">שאלון הקמ"ד</div>
             </div>
-            <div class="banner"></div>
             <div class="progress-line">
                 <div class="line line1">
                     <div class="img icon1">
@@ -90,17 +89,16 @@
             </div>
             <div class="content">
                 <div class="step step0">
-                    <h2>ברוך/ה הבא/ה לשאלון המיון ליחידות ההסרטה!</h2>
+                    <h2>ברוך הבא לשאלון מיון למועמד/ת לתפקיד מש&quot;ק דוברות</h2>
                     <p class="starttext">
-                        <b>שלום רב, בשאלון קצר זה תידרש/י למילוי פרטים אישיים אודותייך (פרטים אישיים ומשפחתיים, השכלה, שפה, פעילות חברתית, מוטיבציה לשירות וידע מקצועי) ובנוסף לציין מגבלות הידועות לך אודות שירותך הצבאי הצפוי.</b><br/>
+                        <b>שלום רב, לפניכם שאלון בו תידרש/י למלא פרטים אישיים אודותייך (פרטים אישיים ומשפחתיים, השכלה, שפה, פעילות חברתית, מוטיבציה לשירות וידע מקצועי), ולציין מגבלות הידועות לך אודות שירותך הצבאי הצפוי.
+                        </b><br/>
                         <br/>
-                        פרטי השאלון יוצגו לצוותי המיון בלבד לצרכים מקצועיים ואינם משמשים לשום פעילות אחרת.<br/>
+                        פרטי השאלון יוצגו לצוותי המיון בלבד לצרכים מקצועיים ואינם משמשים לשום פעילות אחרת. שים/י לב למילוי השאלון באופן מוקפד, רציני ואחראי היות והוא מייצג אותך בפני צוות המיון.<br/>
                         <br/>
-                        עוד תידרש/י להעלות את תיק העבודות שלך מהתחום בו הנך עוסק ולבחור תחום אחד או שניים אליהם תרצה/י להתמיין בהמשך התהליך.<br/>
+                        השאלות מתייחסות לפרטים המאפיינים אתכם ואתכם בלבד, אין בשאלון תשובות נכונות או לא נכונות. השאלון אינו מוגבל בזמן וניתן למילוי פעם אחת בלבד.<br/>
                         <br/>
-                        שים/שימי לב למילוי השאלון באופן מוקפד, רציני ואחראי היות והוא מייצג אותך בפני צוות המיון. ניתן למלא את השאלון רק פעם אחת בלבד.<br/>
-                        <br/>
-                        לכל שאלה או סיוע בנוגע לשאלון בלבד ניתן לפנות לצוות המיון באמצעות הדוא"ל הבא: (Hasratad@gmail.com).<br/>
+                        לכל שאלה או סיוע בנוגע לשאלון בלבד ניתן לפנות לצוות המיון באמצעות הדוא"ל הבא: school.spox@gmail.com<br/>
                         <br/>
                         תשובות ותאומים למיון או בכל נושא אחר הקשור לגיוסך יש לפנות למיטב בלבד באמצעות הדרכים המופיעות באתר ובזימון.<br/>
                         <br/>בהצלחה!
@@ -121,16 +119,12 @@
                             <input type="text" name="firstname" id="firstName" class="mandatory">
                         </div>
                     </div>
-                    <div class="input inline-block">
-                        <div class="description">
-                            תמונה אישית * <div class="tip">(עד 5 MB)</div>
+                    <div class="input">
+                        <div class="description">שם מלא באנגלית *
                         </div>
-                        <label id="userImgLabel" for="userImg" class="custom-file-upload">
-                            <i class="fa fa-cloud-upload"></i>
-                            העלאת תמונה                  
-                        </label>
-                        <div id="imgName"></div>
-                        <input id="userImg" type="file" class="hide mandatory" />
+                        <div class="textinput">
+                            <input type="text" name="fullnameenglish" id="fullNameEnglish" class="mandatory">
+                        </div>
                     </div>
                     <div class="input">
                         <div class="description">תעודת זהות *
@@ -145,6 +139,13 @@
                         <select class="years mandatory"></select>
                         <select class="months mandatory"></select>
                         <select class="days mandatory"></select>
+                    </div>
+                    <div class="input">
+                        <div class="description">ארץ לידה *
+                        </div>
+                        <div class="textinput">
+                            <input type="text" name="birthcountry" id="birthCountry" class="mandatory">
+                        </div>
                     </div>
                     <div class="input date" id="aliahData">
                         <div class="description">תאריך עלייה
@@ -207,10 +208,17 @@
                         </div>
                     </div>
                     <div class="input">
-                        <div class="description">סלולארי *
+                        <div class="description">טלפון נייד *
                         </div>
                         <div class="textinput">
                             <input type="text" name="cellphone" id="cellphone" class="mandatory">
+                        </div>
+                    </div>
+                    <div class="input">
+                        <div class="description">טלפון להודעות (הורים, קרובים, עבודה) *
+                        </div>
+                        <div class="textinput">
+                            <input type="text" name="otherphone" id="otherPhone" class="mandatory">
                         </div>
                     </div>
                 </div>
@@ -325,91 +333,6 @@
                     </div>
                 </div>
                 <div class="step step3">
-                    <h2>העלאת קבצים לתיק עבודות</h2>
-                    <div class="description">בתיק עבודות זה כלולות עבודות מהתחומים הבאים(הקיפו את הרלוונטים):
-                        </div>
-                    <br/>
-                    <div>
-                        א. צילום וידאו (כולל תאורה וסאונד) <div class="tip">(mov, mp4)</div>
-                    </div>
-                    <div>
-                        ב. צילום סטילס <div class="tip">(jpg, pdf)</div>
-                    </div>
-                    <div>
-                        ג. תסריט ותחקיר  <div class="tip">(doc, pdf)</div>
-                    </div>
-                    <div>
-                        ד. הפקה - תיק הפקה, קובץ וידאו <div class="tip">(pdf, doc, jpg)</div>
-                    </div>
-                    <div>
-                        ה. עריכת וידאו <div class="tip">(mp4, mov)</div>
-                    </div>
-                    <div>
-                        ו. גרפיקה <div class="tip">(png, jpg, pdf)</div>
-                    </div>
-                    <div>
-                        ז. אנימציה <div class="tip">(mov)</div>
-                    </div>
-                    <div class="maxSizeNote">משקל כולל להעלאת כלל הקבצים עד 500MB <div class="tip" style="font-weight: bold;">(הנך רשאי להעלות עד חמישה קבצים) *</div></div>
-                    <div class="box">
-                        <div class="innerBox">
-                            <table class="addRemovePlugin" id="portfolioFiles">
-                                <tr class="th">
-                                    <td></td>
-                                    <td>קובץ</td>
-                                    <td>מדיה</td>
-                                    <td>שם עבודה, שנה ופרטיים כללים</td>
-                                    <td>תפקיד שביצעתי\תרומתי לעבודה</td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td><input name="file" type="file" accept=".png,.doc,.mp4,.mov,.jpg,.pdf" style="width: 190px" class="mandatory"></td>
-                                    <td>
-                                        <select name="type">
-                                            <option>צילום וידאו</option>
-                                            <option>צילום סטילס</option>
-                                            <option>תסריט ותחקיר</option>
-                                            <option>הפקה - תיק הפקה</option>
-                                            <option>הפקה - קובץ וידאו</option>
-                                            <option>עריכת וידאו</option>
-                                            <option>גרפיקה</option>
-                                            <option>אנימציה</option>
-                                        </select>
-                                    </td>
-                                    <td><textarea name="details"></textarea></td>
-                                    <td><textarea name="rule"></textarea></td>
-                                </tr>
-                                <tr class="disabled fifthDisabled">
-                                    <td><img class="plusRemoveIcon add" src="assets/img/add.png"></td>
-                                    <td><input name="file" type="file" accept=".png,.doc,.mp4,.mov,.jpg,.pdf" style="width: 190px"></td>
-                                    <td>
-                                        <select name="type">
-                                            <option>צילום וידאו</option>
-                                            <option>צילום סטילס</option>
-                                            <option>תסריט ותחקיר</option>
-                                            <option>הפקה - תיק הפקה</option>
-                                            <option>הפקה - קובץ וידאו</option>
-                                            <option>עריכת וידאו</option>
-                                            <option>גרפיקה</option>
-                                            <option>אנימציה</option>
-                                        </select>
-                                    </td>
-                                    <td><textarea name="details"></textarea></td>
-                                    <td><textarea name="rule"></textarea></td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                    <h2>בחר שני תחומים *</h2>
-                    <div class="boldQuestion">אם תתקבל/י לאחת מהיחידות, באילו שניים מהתחומים הבאים היית הכי רוצה לעסוק?</div>
-                    <input type="checkbox" name="2units" class="2units" value="צילום וידאו (כולל תאורת וסאונד)">צילום וידאו (כולל תאורת וסאונד)<br>
-                    <input type="checkbox" name="2units" class="2units" value="צילום סטילס">צילום סטילס<br>
-                    <input type="checkbox" name="2units" class="2units" value="תסריטאות ותחקיר">תסריטאות ותחקיר<br>
-                    <input type="checkbox" name="2units" class="2units" value="הפקה">הפקה<br>
-                    <input type="checkbox" name="2units" class="2units" value="עריכת וידאו">עריכת וידאו<br>
-                    <input type="checkbox" name="2units" class="2units" value="גרפיקה ואנימציה">גרפיקה ואנימציה
-                </div>
-                <div class="step step4">
                     <h2>מלא/י פרטי השכלה תיכונית</h2>
                     <h3>בית ספר יסודי ומעלה</h3>
                     <div class="box">
@@ -506,22 +429,48 @@
                     </div>
                     <div class="boldQuestion">כתוב/י מהו ממוצע הציונים שלך בתעודת הסיום של שנת הלימודים הקודמת</div>
                     <input type="number" name="alone" id="scoreAverage" min="50" max="100">
-                    <div class="boldQuestion">האם את/ה בלימודי מכללה במסלול קולנוע וטלוויזיה (י״ג-י״ד)? *</div>
+                    <div class="boldQuestion">האם את/ה בלימודי מכללה במסלול קולנוע וטלוויזיה (י״ג-י״ד)?</div>
                     <div class="radioLine">
                         <input type="radio" name="miclala" value="no" checked> לא
                         <input type="radio" name="miclala" value="yudGimel"> י"ג
                         <input type="radio" name="miclala" value="yudDaled"> י"ד
                     </div>
-                    <div class="boldQuestion">תאר את סגנון הלימוד שלך, איזה תלמיד היית? <div class="tip">(עד 140 תווים)</div> *</div>
-                    <textarea class="questionText mandatory" name="alone" id="studyStyle"></textarea>
 
-                    <div class="boldQuestion">מה היה לך יותר קשה בבית-הספר? <div class="tip">(עד 140 תווים)</div> *</div>
-                    <textarea class="questionText mandatory" name="alone" id="hardSchool"></textarea>
+                    <div class="boldQuestion">האם כתבת עבודת גמר בתיכון? אם כן, הצג את נושא העבודה. <div class="tip">(עד 140 תווים)</div></div>
+                    <textarea class="questionText" name="alone" id="endProject"></textarea>
 
-                    <div class="boldQuestion">איך המחנך שלך היה מתאר אותך? <div class="tip">(עד 140 תווים)</div> *</div>
-                    <textarea class="questionText mandatory" name="alone" id="yourTeacherDesc"></textarea>
+                    <div class="boldQuestion">האם ניגשת למבחן הפסיכומטרי לקבלה לאוניברסיטה?</div>
+                    <div class="radioLine">
+                        <input type="radio" name="hasPsychometry" value="yes" onclick="$('.didPsychometry').fadeIn()"> כן
+                        <input checked type="radio" name="hasPsychometry" value="no" onclick="$('.didPsychometry').fadeOut()"> לא
+                    </div>
+                    <div class="didPsychometry">
+                        <div class="boldQuestion">
+                            <div>ציון
+                            </div>
+                            <div class="textinput">
+                                <input type="text" name="psychometrygrade" id="psychometryGrade">
+                            </div>
+                        </div>
+                        <div class="boldQuestion date" id="psychometryDate">
+                            <div>תאריך המבחן
+                            </div>
+                            <select class="years empty"></select>
+                            <select class="months empty"></select>
+                            <select class="days empty"></select>
+                        </div>
+                    </div>
+
+                    <div class="boldQuestion">תאר את סגנון הלימוד שלך, איזה תלמיד היית? <div class="tip">(עד 140 תווים)</div></div>
+                    <textarea class="questionText" name="alone" id="studyStyle"></textarea>
+
+                    <div class="boldQuestion">מה היה לך יותר קשה בבית-הספר? <div class="tip">(עד 140 תווים)</div></div>
+                    <textarea class="questionText" name="alone" id="hardSchool"></textarea>
+
+                    <div class="boldQuestion">איך המחנך שלך היה מתאר אותך? <div class="tip">(עד 140 תווים)</div></div>
+                    <textarea class="questionText" name="alone" id="yourTeacherDesc"></textarea>
 				</div>
-                <div class="step step5">
+                <div class="step step4">
                     <h2>פרט/י בנוגע לכישורי שפה *</h2>
                     <div class="box">
                         <div class="innerBox">
@@ -566,11 +515,14 @@
                         </div>
                     </div>
 				</div>
-                <div class="step step6">
+                <div class="step step5">
                     <h2>הרחב/י בנוגע לפעילותך החברתית *</h2>
 
                     <div class="boldQuestion">תאר את חוג החברים שלך <div class="tip">(עד 140 תווים)</div></div>
                     <textarea class="mandatory questionText" name="alone" id="friendsCircle"></textarea>
+
+                    <div class="boldQuestion">האם עסקת בפעילות חברתית בבית הספר? אם כן, תאר את מעורבותך <div class="tip">(עד 140 תווים)</div></div>
+                    <textarea class="mandatory questionText" name="alone" id="schoolProgram"></textarea>
 
                     <div class="boldQuestion">האם היית פעיל בתנועת נוער ו/או פעילות התנדבותית? אם כן, תאר את מעורבותך ומשך הזמן שהיית פעיל <div class="tip">(עד 140 תווים)</div></div>
                     <textarea class="mandatory questionText" name="alone" id="tnuatNoar"></textarea>
@@ -578,21 +530,15 @@
                     <div class="boldQuestion">עם איזה אנשים יותר קשה לך להסתדר? <div class="tip">(עד 140 תווים)</div></div>
                     <textarea class="mandatory questionText" name="alone" id="hardPeople"></textarea>
 
-                    <div class="boldQuestion">מה התכונה החזקה או החיובית המאפיינת אותך ביותר? איך זה בא לידי ביטוי? <div class="tip">(עד 140 תווים)</div></div>
-                    <textarea class="mandatory questionText" name="alone" id="favoriteCharacter"></textarea>
-
-                    <div class="boldQuestion">איזו תכונה חלשה או שלילית מאפיינת אותך? איך זה בא לידי ביטוי? <div class="tip">(עד 140 תווים)</div></div>
-                    <textarea class="mandatory questionText" name="alone" id="worstCharacter"></textarea>
-
                     <div class="boldQuestion">מ-1 עד 5, מה להערכתך היא רמת הכושר הגופני שלך? <div class="tip">(1=הכי נמוך, 5=הכי גבוה)</div></div>
                     <input class="five" type="range" name="alone" id="sportsLevel" min="1" max="5" value ="1" />
 				</div>
-                <div class="step step7">
+                <div class="step step6">
                     <h2>מוטיבציה *</h2>
-                    <div class="boldQuestion">מ-1 עד 5, עד כמה היית מעוניין/ת לשרת באחת מיחידות ההסרטה? <div class="tip">(1=הכי נמוך, 5=הכי גבוה)</div></div>
-                    <input class="five" type="range" name="alone" id="serveHasrata" min="1" max="5" value ="1" />
+                    <div class="boldQuestion">מ-1 עד 5, עד כמה היית מעוניין לשרת בחטיבת דובר צה"ל? <div class="tip">(1=הכי נמוך, 5=הכי גבוה)</div></div>
+                    <input class="five" type="range" name="alone" id="serveDotz" min="1" max="5" value ="1" />
 
-                    <div class="boldQuestion">ביחס לתפקידים אחרים/יחידות אחרות בהם היית רוצה לשרת בצבא, היכן מדורגות יחידות ההסרטה?</div>
+                    <div class="boldQuestion">ביחס לתפקידים אחרים/ יחידות אחרות בהן היית רוצה לשרת בצבא, היכן מדורגת חטיבת דובר צה"ל?</div>
                     <div class="checkboxes">
                         <input checked type="radio" name="motivationRadio" value="במקום הראשון"> במקום הראשון<br/>
                         <input type="radio" name="motivationRadio" value="אחד מהמקומות הראשונים"> אחד מהמקומות הראשונים<br/>
@@ -600,109 +546,51 @@
                         <input type="radio" name="motivationRadio" value="לא יודע"> לא יודע<br/>
                     </div>
 
-                    <div class="boldQuestion">אני מעוניין/ת לשרת מיחידות ההסרטה כי... <div class="tip">(עד 140 תווים)</div></div>
-                    <textarea class="mandatory questionText" name="alone" id="whyServeHasrata"></textarea>
+                    <div class="boldQuestion">אני מעוניין לשרת כמש"ק דוברות כי... <div class="tip">(עד 140 תווים)</div></div>
+                    <textarea class="mandatory questionText" name="alone" id="whyServeDotz"></textarea>
 
-                    <div class="boldQuestion">מהן ציפיותך מהשירות הצבאי באחת מיחידות ההסרטה? <div class="tip">(עד 140 תווים)</div></div>
+                    <div class="boldQuestion">מהן ציפיותך  מהשירות הצבאי כמש"ק דוברות? <div class="tip">(עד 140 תווים)</div></div>
                     <textarea class="mandatory questionText" name="alone" id="tzipiot"></textarea>
 
-                    <div class="boldQuestion">מהם חששותיך מהשירות הצבאי באחת מיחידות ההסרטה? <div class="tip">(עד 140 תווים)</div></div>
+                    <div class="boldQuestion">מהם חששותיך  מהשירות הצבאי כמש"ק דוברות? <div class="tip">(עד 140 תווים)</div></div>
                     <textarea class="mandatory questionText" name="alone" id="fears"></textarea>
 
                     <div class="boldQuestion">במידה ותחוש שאתה לא ממצה את כישוריך, מה תעשה? <div class="tip">(עד 140 תווים)</div></div>
                     <textarea class="mandatory questionText" name="alone" id="whatDoIf"></textarea>
 
-                    <div class="boldQuestion">מה לדעתך השירות ביחידת ההסרטה יוכל להקנות לך? <div class="tip">(עד 140 תווים)</div></div>
+                    <div class="boldQuestion">מה לדעתך תוכל לתרום במיוחד לחטיבת דובר צה"ל? <div class="tip">(עד 140 תווים)</div></div>
                     <textarea class="mandatory questionText" name="alone" id="whatWillGive"></textarea>
 
-                    <div class="boldQuestion">מה לדעתך תוכל לתרום במיוחד ליחידת ההסרטה? <div class="tip">(עד 140 תווים)</div></div>
+                    <div class="boldQuestion">מה לדעתך השירות כמש"ק דוברות יוכל להקנות לך? <div class="tip">(עד 140 תווים)</div></div>
                     <textarea class="mandatory questionText" name="alone" id="whatSpecialGive"></textarea>
 				</div>
-                <div class="step step8">
-                    <h2>דרג\י את הידע המקצועי שלך</h2>
-                    <h3>תוכנות\ציוד מקצועי בהם אני משתמש</h3>
-                    <div class="box">
-                        <div class="innerBox">
-                            <table class="addRemovePlugin" id="softwares">
-                                <tr class="th">
-                                    <td></td>
-                                    <td>תוכנה/ציוד</td>
-                                    <td>זמן שימוש/היכרות</td>
-                                    <td>איך למדתי (<div class="tip">(עד 140 תווים)</div></td>
-                                    <td>מה אני יודע ליישם (<div class="tip">(עד 140 תווים)</div></td>
-                                </tr>
-                                <tr>
-                                    <td><img class="plusRemoveIcon remove" src="assets/img/remove.png"></td>
-                                    <td><input name="softwareName"></td>
-                                    <td>
-                                        <select name="time">
-                                            <option>חודש</option>
-                                            <option>3 חודשים</option>
-                                            <option>חצי שנה</option>
-                                            <option>שנה</option>
-                                            <option>שנתיים</option>
-                                            <option>3 שנים ומעלה</option>
-                                        </select>
-                                    </td>
-                                    <td><input name="howLearned"></td>
-                                    <td><input name="whatKnow"></td>
-                                </tr>
-                                <tr class="disabled">
-                                    <td><img class="plusRemoveIcon add" src="assets/img/add.png"></td>
-                                    <td><input name="softwareName"></td>
-                                    <td>
-                                        <select name="time">
-                                            <option>חודש</option>
-                                            <option>3 חודשים</option>
-                                            <option>חצי שנה</option>
-                                            <option>שנה</option>
-                                            <option>שנתיים</option>
-                                            <option>3 שנים ומעלה</option>
-                                        </select>
-                                    </td>
-                                    <td><input name="howLearned"></td>
-                                    <td><input name="whatKnow"></td>
-                                </tr>
-                            </table>
-                        </div>
+                <div class="step step7">
+                    <h2>ידע מקצועי</h2>
+                    <div class="boldQuestion">האם יש לכם ניסיון באחד מתחומים התקשורת הבאים:</div>
+                    <div class="checkboxes">
+                        <input checked type="radio" name="experienceRadio" value="כתיבה" onclick="$('#experience').fadeOut()">כתיבה<br/>
+                        <input type="radio" name="experienceRadio" value="עיתונאות" onclick="$('#experience').fadeOut()">עיתונאות<br/>
+                        <input type="radio" name="experienceRadio" value="פרסום" onclick="$('#experience').fadeOut()">פרסום<br/>
+                        <input type="radio" name="experienceRadio" value="יחסי ציבור" onclick="$('#experience').fadeOut()">יחסי ציבור<br/>
+                        <input type="radio" name="experienceRadio" value="דוברות" onclick="$('#experience').fadeOut()">דוברות<br/>
+                        <input type="radio" name="experienceRadio" value="קולנוע" onclick="$('#experience').fadeOut()">קולנוע<br/>
+                        <input type="radio" name="experienceRadio" value="וידאו" onclick="$('#experience').fadeOut()">וידאו<br/>
+                        <input type="radio" name="experienceRadio" value="אחר – פרט" onclick="$('#experience').fadeIn()">אחר – פרט
+                        <input type="text" name="experience" id="experience">
                     </div>
 
-                    <div class="description" style="padding-top: 40px">מ-1 עד 10, דרג\י את רמת הידע והניסיון שלך בכל אחד מהתחומים הבאים (1=הכי נמוך, 10=הכי גבוה) *</div>
+                    <div class="boldQuestion">האם אי פעם התפרסמה יצירה מפרי עטך? פרט מה פורסם, באיזה נושא, מתי והיכן <div class="tip">(עד 140 תווים)</div></div>
+                    <textarea class="questionText" name="publication" id="publication"></textarea>
 
-                    <div class="boldQuestion">צילום וידאו, תאורה וסאונד</div>
-                    <input type="range" id="videoShoot" name="alone" min="1" max="10" value ="1" />
-
-                    <div class="boldQuestion">צילום סטילס</div>
-                    <input type="range" id="photoSteel" name="alone" min="1" max="10" value ="1" />
-
-                    <div class="boldQuestion">תחקיר ותסריט</div>
-                    <input type="range" id="investigateTasrit" name="alone" min="1" max="10" value ="1" />
-
-                    <div class="boldQuestion">עריכת וידאו</div>
-                    <input type="range" id="videoEditing" name="alone" min="1" max="10" value ="1" />
-
-                    <div class="boldQuestion">גרפיקה ואנימציה</div>
-                    <input type="range" id="graphicsAnimation" name="alone" min="1" max="10" value ="1" />
-
-                    <div class="boldQuestion">הפקה</div>
-                    <input type="range" id="production" name="alone" min="1" max="10" value ="1" />
-
-                    <div class="boldQuestion">רמת הידע בבניית אפליקציות לטלפונים חכמים</div>
-                    <input type="range" id="applications" name="alone" min="1" max="10" value ="1" />
-
-                    <div class="boldQuestion">רמת השליטה בבניית דפי אינטרנט</div>
-                    <input type="range" id="buildWeb" name="alone" min="1" max="10" value ="1" />
-
-                    <div class="boldQuestion">רמת השליטה ב-HTML5</div>
-                    <input type="range" id="html5" name="alone" min="1" max="10" value ="1" />
-
-                    <div class="boldQuestion">רמת השליטה ברשתות FTP</div>
-                    <input type="range" id="ftp" name="alone" min="1" max="10" value ="1" />
-
-                    <div class="boldQuestion">ידע בהקמת רשתות מחשבים</div>
-                    <input type="range" id="networks" name="alone" min="1" max="10" value ="1" />
+                    <div class="boldQuestion">באיזו תדירות את/ה צורך/ת תקשורת?</div>
+                    <div class="checkboxes">
+                        <input checked type="radio" name="newsFrequency" value="כל שעה">כל שעה<br/>
+                        <input type="radio" name="newsFrequency" value="3 פעמים ביום">3 פעמים ביום<br/>
+                        <input type="radio" name="newsFrequency" value="פעם ביום">פעם ביום<br/>
+                        <input type="radio" name="newsFrequency" value="לא צורכים">לא צורכים<br/>
+                    </div>               
                 </div>
-                <div class="step step9">
+                <div class="step step8">
                     <h2>מעלה קבצים</h2>
                     <div class="box">
                         <div class="innerBox">
@@ -711,8 +599,8 @@
                         </div>
                     </div>
 				</div>
-                <div class="step step10">
-                    <h2>ברכות! סיימת בהצלחה את מילוי שאלון יחידות ההסרטה והעלאת תיק העבודות. בהמשך תקבל זימון ממיטב לשלב הבא בתהליך המיון.<br> מאחלים לך המשך הצלחה.</h2>
+                <div class="step step9">
+                    <h2>ברכות! סיימת בהצלחה את מילוי שאלון מיון לתפקיד מש"ק דוברות. בהמשך תקבל זימון ממיטב לשלב הבא בתהליך המיון.<br> מאחלים לך המשך הצלחה.</h2>
 				</div>
                 <div class="buttons">
                     <div class="button continue" id="continue">המשך</div>
