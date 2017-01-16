@@ -157,7 +157,7 @@ function getLanguagesOptions() {
 }
 
 function changeStep(x) {
-	for(i=1; i<=10; i++) {
+	for(i=1; i<=9; i++) {
 		$(".line").removeClass("colored")
 	}
 	if(x >= 1) {
@@ -166,17 +166,18 @@ function changeStep(x) {
 		}
 	}
 
-	if(x > 0 && x < 10)
+	if(x > 0 && x < 9)
 		$(".buttons .back").show()
 	else
 		$(".buttons .back").hide()
-	if(x < 9)
+	if(x < 8)
 		$(".buttons .continue").show()
 	else
 		$(".buttons .continue").hide()
 
 	$(".content .step").hide()
 	$(".content .step"+x).show()
+	console.log(x)
 
 	if(x == 8)
 		sendForm()
@@ -259,7 +260,7 @@ function sendForm() {
 	delete form['undefined']
 	console.log(form)
 	db.ref('users/'+uid).set(form, function() {
-		changeStep(10)
+		changeStep(9)
 		console.log(form)
 	})
 }
