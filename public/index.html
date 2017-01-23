@@ -310,16 +310,6 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="input inline-block innerBox2in2" id="בעיות כלכליות\משפחתיות">
-                            <div class="textinput inline-block innerBox2in2">
-                                <input id="check5" type="checkbox" class="checkbox checkbox2in2 checkboxNotFirst">
-                                <div class="description inline-block line2in2 line2in2notFirst">בעיות כלכליות\משפחתיות</div>
-                                <div class="twoTextInputs">
-                                    <textarea type="text" class="handicap check5" name="limit" disabled=""></textarea>
-                                    <textarea type="text" class="serviceHandicap check5" name="conditions" disabled=""></textarea>
-                                </div>
-                            </div>
-                        </div>
                         <div class="input inline-block innerBox2in2" id="אחר">
                             <div class="textinput inline-block innerBox2in2">
                                 <input id="check6" type="checkbox" class="checkbox checkbox2in2 checkboxNotFirst">
@@ -365,35 +355,7 @@
                             </table>
                         </div>
                     </div>
-                    <h3>ציוני מקצועות התקשורת</h3>
-                    <div class="box">
-                        <div class="innerBox">
-                            <table class="addRemovePlugin" id="communicationScore">
-                                <tr class="th">
-                                    <td></td>
-                                    <td>מקצוע</td>
-                                    <td>מספר יחידות</td>
-                                    <td>ציון</td>
-                                    <td>הערות <br><div class="tip">(האם זהו ציון בגרות, ציון הגשה לבגרות או ציון סוף שנה)</div></td>
-                                </tr>
-                                <tr>
-                                    <td><img class="plusRemoveIcon remove" src="assets/img/remove.png"></td>
-                                    <td><input name="skill"></td>
-                                    <td><input type="number" name="unitsNumber" min="1" max="20"></td>
-                                    <td><input name="score"></td>
-                                    <td><input name="notes" class="notesWidth"></td>
-                                </tr>
-                                <tr class="disabled">
-                                    <td><img class="plusRemoveIcon add" src="assets/img/add.png"></td>
-                                    <td><input name="skill"></td>
-                                    <td><input type="number" name="unitsNumber" min="1" max="20"></td>
-                                    <td><input name="score"></td>
-                                    <td><input name="notes" class="notesWidth"></td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                    <h3>ציון מקצועות נוספים של 5 יחידות ומעלה</h3>
+                    <h3>ציוני מקצועות של 5 יחידות ומעלה</h3>
                     <div class="box">
                         <div class="innerBox">
                             <table class="addRemovePlugin" id="5unitsPlus">
@@ -461,14 +423,14 @@
                         </div>
                     </div>
 
-                    <div class="boldQuestion">תאר את סגנון הלימוד שלך, איזה תלמיד היית? <div class="tip">(עד 140 תווים)</div></div>
-                    <textarea class="questionText" name="alone" id="studyStyle"></textarea>
+                    <div class="boldQuestion">תאר את סגנון הלימוד שלך, איזה תלמיד היית? <div class="tip">(עד 140 תווים)</div> *</div>
+                    <textarea class="questionText mandatory" name="alone" id="studyStyle"></textarea>
 
-                    <div class="boldQuestion">מה היה לך יותר קשה בבית-הספר? <div class="tip">(עד 140 תווים)</div></div>
-                    <textarea class="questionText" name="alone" id="hardSchool"></textarea>
+                    <div class="boldQuestion">מה היה לך יותר קשה בבית-הספר? <div class="tip">(עד 140 תווים)</div> *</div>
+                    <textarea class="questionText mandatory" name="alone" id="hardSchool"></textarea>
 
-                    <div class="boldQuestion">איך המחנך שלך היה מתאר אותך? <div class="tip">(עד 140 תווים)</div></div>
-                    <textarea class="questionText" name="alone" id="yourTeacherDesc"></textarea>
+                    <div class="boldQuestion">איך המחנך שלך היה מתאר אותך? <div class="tip">(עד 140 תווים)</div> *</div>
+                    <textarea class="questionText mandatory" name="alone" id="yourTeacherDesc"></textarea>
 				</div>
                 <div class="step step4">
                     <h2>פרט/י בנוגע לכישורי שפה *</h2>
@@ -516,22 +478,19 @@
                     </div>
 				</div>
                 <div class="step step5">
-                    <h2>הרחב/י בנוגע לפעילותך החברתית *</h2>
+                    <h2>הרחב/י בנוגע לפעילותך החברתית</h2>
 
-                    <div class="boldQuestion">תאר את חוג החברים שלך <div class="tip">(עד 140 תווים)</div></div>
+                    <div class="boldQuestion">תאר את חוג החברים שלך <div class="tip">(עד 140 תווים)</div> *</div>
                     <textarea class="mandatory questionText" name="alone" id="friendsCircle"></textarea>
 
                     <div class="boldQuestion">האם עסקת בפעילות חברתית בבית הספר? אם כן, תאר את מעורבותך <div class="tip">(עד 140 תווים)</div></div>
-                    <textarea class="mandatory questionText" name="alone" id="schoolProgram"></textarea>
+                    <textarea class="questionText" name="alone" id="schoolProgram"></textarea>
 
                     <div class="boldQuestion">האם היית פעיל בתנועת נוער ו/או פעילות התנדבותית? אם כן, תאר את מעורבותך ומשך הזמן שהיית פעיל <div class="tip">(עד 140 תווים)</div></div>
-                    <textarea class="mandatory questionText" name="alone" id="tnuatNoar"></textarea>
+                    <textarea class="questionText" name="alone" id="tnuatNoar"></textarea>
 
-                    <div class="boldQuestion">עם איזה אנשים יותר קשה לך להסתדר? <div class="tip">(עד 140 תווים)</div></div>
+                    <div class="boldQuestion">עם איזה אנשים יותר קשה לך להסתדר? <div class="tip">(עד 140 תווים)</div> *</div>
                     <textarea class="mandatory questionText" name="alone" id="hardPeople"></textarea>
-
-                    <div class="boldQuestion">מ-1 עד 5, מה להערכתך היא רמת הכושר הגופני שלך? <div class="tip">(1=הכי נמוך, 5=הכי גבוה)</div></div>
-                    <input class="five" type="range" name="alone" id="sportsLevel" min="1" max="5" value ="1" />
 				</div>
                 <div class="step step6">
                     <h2>מוטיבציה *</h2>
@@ -549,34 +508,23 @@
                     <div class="boldQuestion">אני מעוניין לשרת כמש"ק דוברות כי... <div class="tip">(עד 140 תווים)</div></div>
                     <textarea class="mandatory questionText" name="alone" id="whyServeDotz"></textarea>
 
-                    <div class="boldQuestion">מהן ציפיותך  מהשירות הצבאי כמש"ק דוברות? <div class="tip">(עד 140 תווים)</div></div>
-                    <textarea class="mandatory questionText" name="alone" id="tzipiot"></textarea>
-
-                    <div class="boldQuestion">מהם חששותיך  מהשירות הצבאי כמש"ק דוברות? <div class="tip">(עד 140 תווים)</div></div>
-                    <textarea class="mandatory questionText" name="alone" id="fears"></textarea>
-
-                    <div class="boldQuestion">במידה ותחוש שאתה לא ממצה את כישוריך, מה תעשה? <div class="tip">(עד 140 תווים)</div></div>
-                    <textarea class="mandatory questionText" name="alone" id="whatDoIf"></textarea>
-
                     <div class="boldQuestion">מה לדעתך תוכל לתרום במיוחד לחטיבת דובר צה"ל? <div class="tip">(עד 140 תווים)</div></div>
                     <textarea class="mandatory questionText" name="alone" id="whatWillGive"></textarea>
-
-                    <div class="boldQuestion">מה לדעתך השירות כמש"ק דוברות יוכל להקנות לך? <div class="tip">(עד 140 תווים)</div></div>
-                    <textarea class="mandatory questionText" name="alone" id="whatSpecialGive"></textarea>
 				</div>
                 <div class="step step7">
                     <h2>ידע מקצועי</h2>
                     <div class="boldQuestion">האם יש לך ניסיון באחד מתחומי התקשורת הבאים?</div>
                     <div class="checkboxes">
-                        <input checked type="radio" name="experienceRadio" value="כתיבה" onclick="$('#experience').fadeOut()">כתיבה<br/>
-                        <input type="radio" name="experienceRadio" value="עיתונאות" onclick="$('#experience').fadeOut()">עיתונאות<br/>
-                        <input type="radio" name="experienceRadio" value="פרסום" onclick="$('#experience').fadeOut()">פרסום<br/>
-                        <input type="radio" name="experienceRadio" value="יחסי ציבור" onclick="$('#experience').fadeOut()">יחסי ציבור<br/>
-                        <input type="radio" name="experienceRadio" value="דוברות" onclick="$('#experience').fadeOut()">דוברות<br/>
-                        <input type="radio" name="experienceRadio" value="קולנוע" onclick="$('#experience').fadeOut()">קולנוע<br/>
-                        <input type="radio" name="experienceRadio" value="וידאו" onclick="$('#experience').fadeOut()">וידאו<br/>
-                        <input type="radio" name="experienceRadio" value="אחר – פרט" onclick="$('#experience').fadeIn()">אחר – פרט
-                        <input type="text" name="experience" id="experience">
+                        <input checked type="radio" name="experienceRadio" value="כתיבה" onclick="$('#experienceRadio').fadeOut()">כתיבה<br/>
+                        <input type="radio" name="experienceRadio" value="עיתונאות" onclick="$('#experienceRadio').fadeOut()">עיתונאות<br/>
+                        <input type="radio" name="experienceRadio" value="פרסום" onclick="$('#experienceRadio').fadeOut()">פרסום<br/>
+                        <input type="radio" name="experienceRadio" value="יחסי ציבור" onclick="$('#experienceRadio').fadeOut()">יחסי ציבור<br/>
+                        <input type="radio" name="experienceRadio" value="דוברות" onclick="$('#experienceRadio').fadeOut()">דוברות<br/>
+                        <input type="radio" name="experienceRadio" value="קולנוע" onclick="$('#experienceRadio').fadeOut()">קולנוע<br/>
+                        <input type="radio" name="experienceRadio" value="וידאו" onclick="$('#experienceRadio').fadeOut()">וידאו<br/>
+                        <input type="radio" name="experienceRadio" value="אין" onclick="$('#experienceRadio').fadeOut()">אין<br/>
+                        <input type="radio" name="experienceRadio" value="אחר – פרט" onclick="$('#experienceRadio').fadeIn()">אחר – פרט <div class="tip">(עד 500 תווים)</div>
+                        <textarea class="questionText" name="alone" id="experienceRadio"></textarea>
                     </div>
 
                     <div class="boldQuestion">האם אי פעם התפרסמה יצירה מפרי עטך? פרט מה פורסם, באיזה נושא, מתי והיכן <div class="tip">(עד 140 תווים)</div></div>
@@ -591,11 +539,11 @@
                     </div>               
                 </div>
                 <div class="step step8">
-                    <h2>כתיבה חופשית</h2>
+                    <h2>כתיבה חופשית *</h2>
                     <div class="boldQuestion">אנא כתוב/י בקצרה ובצורה חופשית את עיקרי קורות חייך (ניתן לחזור על דברים שציינתם קודם בשאלון).<div class="tip"> עד 1000 תווים</div></div>
-                    <textarea class="questionText" name="alone" id="freeWriteOne"></textarea>
+                    <textarea class="mandatory questionText" name="alone" id="freeWriteOne"></textarea>
                     <div class="boldQuestion">אנא כתוב/י בקצרה ובצורה חופשית על אדם/ספר/אירוע שהשפיע עליך.<div class="tip"> עד 1000 תווים</div></div>
-                    <textarea class="questionText" name="alone" id="freeWriteTwo"></textarea>
+                    <textarea class="mandatory questionText" name="alone" id="freeWriteTwo"></textarea>
                 </div>
                 <div class="step step9">
                     <h2>מעלה קבצים</h2>
