@@ -146,17 +146,17 @@ body {
 	background-size: contain;
 }
 
-.progress-line .line.colored .img.icon7 {
+.progress-line .line.colored .img.icon8 {
 	background: url(../img/script1-black.png) no-repeat;
 	background-size: contain;
 }
 
-.progress-line .line.colored .img.icon8 {
+.progress-line .line.colored .img.icon9 {
 	background: url(../img/script2-black.png) no-repeat;
 	background-size: contain;
 }
 
-.img.icon1 {right: -4px;}
+.img.icon1 {right: -2px;}
 .img.icon2 {
 	right: 61px;
 	background: url(../img/family-grey.png) no-repeat;
@@ -164,26 +164,26 @@ body {
 	width: 50px;
 	height: 40px;
 }
-.img.icon3 {right: 140px;}
-.img.icon4 {right: 222px;}
-.img.icon5 {right: 295px;}
+.img.icon3 {right: 145px;}
+.img.icon4 {right: 215px;}
+.img.icon5 {right: 298px;}
 .img.icon6 {right: 371px;}
 .img.icon7 {right: 448px;}
-.img.icon7 {
-	right: 446px;
+.img.icon8 {
+	right: 523px;
 	background: url(../img/script1-grey.png) no-repeat;
 	background-size: contain;
 	width: 30px;
 	height: 32px;
 }
-.img.icon8 {
-	right: 521px;
+.img.icon9 {
+	right: 598px;
 	background: url(../img/script2-grey.png) no-repeat;
 	background-size: contain;
 	width: 32px;
 	height: 35px;
 }
-.img.icon9 {right: 599px;}
+.img.icon10 {right: 675px;}
 
 .content {
     padding: 25px 40px;
